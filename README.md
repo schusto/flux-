@@ -21,21 +21,22 @@ Installation:
    
 Configuration variables:
 
-lights (Required) array: List of light entities.
-name (Optional): The name to use when displaying this switch.
-start_time (Optional): The start time. Default to sunrise.
-stop_time (Optional): The stop time. Defaults to 22:00.
-start_colortemp (Optional): The color temperature at the start. Defaults to 4000.
-sunset_colortemp (Optional): The sun set color temperature. Defaults to 3000.
-stop_colortemp (Optional): The color temperature at the end. Defaults to 1900.
-brightness (Optional): The brightness of the lights. Calculated with RGB_to_xy by default.
-disable_brightness_adjust (Optional): If true, brightness will not be adjusted besides color temperature. Defaults to False.
-mode (Optional): Select how color temperature is passed to lights. Valid values are xy, mired and rgb. Defaults to xy.
-transition (Optional): Transition time for the light changes (high values may not be supported by all light models). Defaults to 30.
-interval (Optional): Frequency at which the lights should be updated. Defaults to 30.
-init_on_turn_on (Optional): Defines if a newly turned on light within the Flux Switch will be reset to the Flux color and join in future updates. Defaults to true
+- lights (Required) array: List of light entities.
+- name (Optional): The name to use when displaying this switch.
+- start_time (Optional): The start time. Default to sunrise.
+- stop_time (Optional): The stop time. Defaults to 22:00.
+- start_colortemp (Optional): The color temperature at the start. Defaults to 4000.
+- sunset_colortemp (Optional): The sun set color temperature. Defaults to 3000.
+- stop_colortemp (Optional): The color temperature at the end. Defaults to 1900.
+- brightness (Optional): The brightness of the lights. Calculated with RGB_to_xy by default.
+- disable_brightness_adjust (Optional): If true, brightness will not be adjusted besides color temperature. Defaults to False.
+- mode (Optional): Select how color temperature is passed to lights. Valid values are xy, mired and rgb. Defaults to xy.
+- transition (Optional): Transition time for the light changes (high values may not be supported by all light models). Defaults to 30.
+- interval (Optional): Frequency at which the lights should be updated. Defaults to 30.
+- init_on_turn_on (Optional): Defines if a newly turned on light within the Flux Switch will be reset to the Flux color and join in future updates. Defaults to true
 
 Example:
+
 switch:
   - platform: flux++
     disable_brightness_adjust: true
