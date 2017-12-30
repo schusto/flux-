@@ -12,6 +12,10 @@ Improvements:
     to the flux color and participate in future updates
   - New conf parameter init_on_turn_on to define if newly turned on
     lights shall participate and be reset to the flux color or not
+  - It is now possible to call the force_update service specifying 
+    one or more entity_ids of the lights that should be updated. 
+    If no entities are given, all lights in the flux switch will be 
+    updated
 
 Installation:
   To install flux++
