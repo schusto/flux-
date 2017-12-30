@@ -1,29 +1,29 @@
 # flux++
-Home Assistant custome component to let coloured lights folow the day's and circadian rythm
+Home Assistant custom component to let coloured lights folow the day's and circadian rythm
 
 This is heavily based on the original Flux component in Homeassistant: https://home-assistant.io/components/switch.flux/
 
-Improvements:
+## Improvements:
   - Lights that have their color changed manually will not be updated
-  - New service force_update to have all lights in the Flux++ switch 
+  - New service 'force_update' to have all lights in the Flux++ switch 
     which are turned on participate in the future updates again
   - New functionality to listen for newly turned on slights that are 
     part of the Flux++ switch. Newly turned on lights will be updated
     to the flux color and participate in future updates
   - New conf parameter init_on_turn_on to define if newly turned on
     lights shall participate and be reset to the flux color or not
-  - It is now possible to call the force_update service specifying 
+  - It is now possible to call the 'force_update' service specifying 
     one or more entity_ids of the lights that should be updated. 
     If no entities are given, all lights in the flux switch will be 
     updated
 
-Installation:
+## Installation:
   To install flux++
-   - create a folder custom_components\switch under your Home Assistant config dir
-   - download and copy the file flux++.py int this directory
-   - add the definition on which switches to include in the flux automatic updates with the following section in configuration.yaml
+   - create a folder 'custom_components\switch' under your Home Assistant config dir
+   - download and copy the file 'flux++.py' into this directory
+   - add the definition on which switches to include in the flux automatic updates with the following section in 'configuration.yaml'
    
-Configuration variables:
+## Configuration variables:
 
 - lights (Required) array: List of light entities.
 - name (Optional): The name to use when displaying this switch.
@@ -39,8 +39,8 @@ Configuration variables:
 - interval (Optional): Frequency at which the lights should be updated. Defaults to 30.
 - init_on_turn_on (Optional): Defines if a newly turned on light within the Flux Switch will be reset to the Flux color and join in future updates. Defaults to true
 
-Example:
-
+## Example:
+```
 switch:
   - platform: flux++
     disable_brightness_adjust: true
@@ -54,7 +54,8 @@ switch:
       - light.bank_tv
       - light.fonster_tv
       - light.vardagsrum_ceiling
-      
-Shortcomings: 
+ ```
+ 
+# Shortcomings: 
 This has currently only been fully tested with Philips Hue bulbs with the mired color selection mode.
 I would love to get feedback from others to knwo if this works with other bulb types
