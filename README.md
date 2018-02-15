@@ -1,7 +1,7 @@
 # flux++
-Home Assistant custom component to let coloured lights folow the day's and circadian rythm
+Home Assistant custom component to let colored lights follow the day's and circadian rhythm.
 
-This is heavily based on the original Flux component in Homeassistant: https://home-assistant.io/components/switch.flux/
+This is heavily based on the original Flux component in Home Assistant: https://home-assistant.io/components/switch.flux/
 
 ## Improvements:
   - Lights that have their color changed manually will not be updated
@@ -19,9 +19,9 @@ This is heavily based on the original Flux component in Homeassistant: https://h
 
 ## Installation:
   To install flux++
-   - create a folder 'custom_components\switch' under your Home Assistant config dir
-   - download and copy the file 'flux++.py' into this directory
-   - add the definition on which switches to include in the flux automatic updates with the following section in 'configuration.yaml'
+   - create a folder 'custom_components\switch' under your Home Assistant config direcctory.
+   - download and copy the file 'flux++.py' into this directory.
+   - add the definition on which lights to include in the flux automatic updates with the following section in 'configuration.yaml'.
    
 ## Configuration variables:
 
@@ -58,4 +58,4 @@ switch:
  
 # Shortcomings: 
 This has currently only been fully tested with Philips Hue bulbs with the mired color selection mode.
-I would love to get feedback from others to knwo if this works with other bulb types
+I would love to get feedback from others to know if this works with other bulb types.
